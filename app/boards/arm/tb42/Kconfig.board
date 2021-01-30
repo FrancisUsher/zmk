@@ -1,0 +1,8 @@
+# Tiny Blue 42 (TB42) board configuration
+
+# Copyright (c) 2020 Francis Usher
+# SPDX-License-Identifier: MIT
+
+config BOARD_TB42
+	bool "tb42"
+	depends on SOC_NRF52840_QIAA

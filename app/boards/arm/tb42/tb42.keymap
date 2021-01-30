@@ -1,0 +1,32 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+  keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB  |  Q   |  W   |  E   |  R   |  T   |   Y   |  U    |  I   |  O   |   P   | BSPC  |
+// |  ESC  |  A   |  S   |  D   |  F   |  G   |   H   |  J    |  K   |  L   |   ;   |  RET  |
+// | SHIFT |  Z   |  X   |  C   |  V   |  B   |   N   |  M    |  ,   |  .   |   /   |
+// |  LCTL | LGUI | LALT |      SPACE      |       SPACE      |  RAIS | LARW | DARW |
+      bindings = <
+  &kp TAB  &kp Q    &kp W    &kp E  &kp R  &kp T   &kp Y   &kp U  &kp I    &kp O    &kp P    &kp BKSP
+  &kp ESC  &kp A    &kp S    &kp D  &kp F  &kp G   &kp H   &kp J  &kp K    &kp L    &kp SCLN &kp RET
+  &kp LSFT &kp Z    &kp X    &kp C  &kp V  &kp B   &kp N   &kp M  &kp CMMA &kp DOT  &kp FSLH
+  &kp LCTL &kp LGUI &kp LALT               &kp SPC &kp SPC        &kp LCTL &bootloader &reset
+      >;
+    };
+
+//    lower_layer {
+//      bindings = <
+//      &trans &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 &trans
+//      &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+//      &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp RET
+//      &trans &bootloader &reset &trans &trans &trans &trans &bt BT_NXT &bt BT_SEL 0 &bt BT_CLR
+//      >;
+//    };
+  };
+};
