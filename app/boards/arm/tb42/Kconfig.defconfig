@@ -3,7 +3,7 @@
 
 if BOARD_TB42
 
-config BOARD
+config ZMK_KEYBOARD_NAME
 	default "tb42"
 
 if USB
